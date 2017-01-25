@@ -3,6 +3,7 @@ require "bing_search_client/version"
 require "bing_search_client/client"
 require "bing_search_client/result"
 require "bing_search_client/news" 
+require "bing_search_client/web"
 #TODO implement client for Web, Image and Video search
 
 module BingSearchClient
