@@ -23,7 +23,7 @@ module BingSearchClient
         if (200..299).include?(response.code.to_i)
           return { results: BingSearchClient::Result.build_from_array_response(raw_response: body[:value]), extra: body.reject { |k| k != :value } }
         else
-          raise BingSearchClient::BadResponse.new("#{response.status}: #{body}")
+          raise BingSearchClient::BadResponse.new("#{response}: #{body}")
         end
       end
   end
